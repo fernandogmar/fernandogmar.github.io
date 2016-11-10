@@ -3,6 +3,8 @@ published: true
 layout: post
 title: Wake up Neo...
 ---
+##Interesado en un curso Javascript avanzado enfocado a Frontend??
+
 He estado dándole algunas vueltas últimamente... será que lo de ser padre me ha hecho sentirme algo mayor :D. Soy Ingeniero Informático desde el 2004, con experiencia en diferentes lenguajes de programación (C, C++, Java, Prolog, Lisp, PHP, Python....) pero las cosas del destino me ha llevado a desarrollar web apps desde el 2000. Ahora que echo cuentas, madre mía... 16 años ya!
 
 Ha sido un largo camino en el que he visto y he hecho muchas cosas, con más o menos acierto. Pero en todo este tiempo no he parado de aprender... y eso siempre me ha hecho sentir como un novato ;) No sé si has tenido esa sensación? 
