@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Wake up Neo...
 ---
-##Interesado en un curso Javascript avanzado enfocado a Frontend??
+## Interesado en un curso Javascript avanzado enfocado a Frontend??
 
 He estado dándole algunas vueltas últimamente... será que lo de ser padre me ha hecho sentirme algo mayor :D. Soy Ingeniero Informático desde el 2004, con experiencia en diferentes lenguajes de programación (C, C++, Java, Prolog, Lisp, PHP, Python....) pero las cosas del destino me ha llevado a desarrollar web apps desde el 2000. Ahora que echo cuentas, madre mía... 16 años ya!
 
@@ -27,6 +27,6 @@ Javascript no te deja indiferente, lo odias o lo amas, con todos sus encantos y 
 
 Así que ahora me siento como Morfeo, buscandote a ti Neo, para ofrecerte otra visión ;). 
 
-###Interesado en un curso Javascript avanzado enfocado a Frontend??
+### Interesado en un curso Javascript avanzado enfocado a Frontend??
 
 En breve subiré un formulario para ver la mejor forma de enfocarlo. Te prometo que te va encantar! XD
