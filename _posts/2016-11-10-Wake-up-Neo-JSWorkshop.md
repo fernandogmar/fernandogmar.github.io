@@ -23,6 +23,8 @@ Javascript no te deja indiferente, lo odias o lo amas, con todos sus encantos y 
 
 ![Time for Choosing]({{site.baseurl}}/_posts/pills.jpg)
 
-Así que ahora me siento como Morfeo, buscandote a ti Neo, para ofrecerte otra visión ;). Interesado en un curso Javascript enfocado a Frontend??
+Así que ahora me siento como Morfeo, buscandote a ti Neo, para ofrecerte otra visión ;). 
+
+###Interesado en un curso Javascript enfocado a Frontend??
 
 En breve subiré un formulario para ver la mejor forma de enfocarlo. Te prometo que te va encantar! XD
