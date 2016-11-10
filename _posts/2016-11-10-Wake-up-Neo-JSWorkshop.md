@@ -23,7 +23,7 @@ Así que como yo eché de menos en su momento ese "gurú", ese curso revelador, 
 
 Javascript no te deja indiferente, lo odias o lo amas, con todos sus encantos y desencantos...
 
-![Time for Choosing]({{site.baseurl}}/_posts/pills.jpg)
+![Time for Choosing](https://raw.githubusercontent.com/fernandogmar/fernandogmar.github.io/master/_posts/pills.jpg)
 
 Así que ahora me siento como Morfeo, buscandote a ti Neo, para ofrecerte otra visión ;). 
 
