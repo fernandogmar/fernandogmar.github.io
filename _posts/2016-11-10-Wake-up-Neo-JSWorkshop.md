@@ -33,4 +33,4 @@ Así que ahora me siento como Morfeo, buscandote a ti Neo, para ofrecerte otra v
 
 En breve subiré un formulario para ver la mejor forma de enfocarlo. Te prometo que te va encantar! XD
 
-**Aquí esta** ---> [formulario para recopilar tus intereses para el curso](https://goo.gl/KsGQKf) 
+**UPDATE: Aquí esta** ---> [formulario para recopilar tus intereses para el curso](https://goo.gl/KsGQKf) 
