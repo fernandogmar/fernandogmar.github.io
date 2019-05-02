@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+{% load link_type %} 
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>{{ data.news_release.title }}</title>
+        <style type="text/css" media="all">
+            html, body, a, div, p, td, strong, b, i, em, u, li {
+                font-family: Arial, sans-serif;
+                line-height: 22px;
+            }
+            a:link {
+                color: #555354;
+                text-decoration: underline;
+            }
+            a:visited {
+                color: #555354;
+                text-decoration: underline;
+            }
+            a:hover {
+                color: #0072BB;
+                text-decoration: underline;
+            }
+            h2 a {
+               font-family: Georgia, serif;    
+            }
+            h1 {
+                font-family: Georgia, serif;
+                color: #20292E;
+                font-size:30px;
+                font-weight: bold;
+                line-height: 40px;
+                margin-top: 14px;
+                margin-right: 0;
+                margin-bottom: 12px;
+                margin-left:0;
+            }
+            h2 {
+                font-family: Georgia, serif;
+                color: #20292E;
+                font-size:20px;
+                font-weight: bold;
+                line-height:30px;
+                margin-top:14px;
+                margin-right:0;
+                margin-bottom:20px;
+                margin-left:0;
+            }
+        </style>
+    </head>
+    <body bgcolor="#FFFFFF" text="#333333" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+        {% if data.intro %}
+        <table class="__INTRO_CONTAINER__" width="606" border="0" align="center" style="margin-top: 15px;">
+            <tr>
+                <td class="__INTRO_EDITOR__" style="font-family: Arial, sans-serif; color: #20292E; line-height: 22px; font-size: 12px;">{{ data.intro|linebreaks }}</td>
+            </tr>
+            <tr>
+                <td valign="middle" width="606"><img src="https://templates.smart.pr/v2/default/lines/images/line-break.jpg" height="10" width="606" /></td>
+            </tr>
+        </table>
+        {% endif %}
+
+        <table width="620" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td colspan="3" valign="bottom" style="height:15px;width:636px;overflow:hidden;font-size:1px;line-height:1px" width="620" height="15"></td>
+            </tr>
+            <tr valign="top">
+                <td width="15"></td>
+                <td>
+                    <table width="606" border="0" cellpadding="0" cellspacing="0" style="font-family: Georgia, serif; color: #20292E;  font-size:14px;">
+                        <tr>
+                            <td valign="top">
+                                <!--SENDER_LOGO_START-->
+                                <table class="__SENDER_LOGO_CONTAINER__" width="606" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td height="1" bgcolor="#FFFFFF"></td>
+                                    </tr>
+                                    {% if data.news_release.pr_card.logo %}
+                                    <tr>
+                                        <td>
+                                            <table width="606" border="0" cellspacing="0" cellpadding="0">
+                                                <tr height="10">
+                                                    <td width="606"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="606" align="left"> 
+                                                        <img src="{{ data.news_release.pr_card.logo.url|resize:"250" }}" style="margin-top: 10px">          
+                                                    </td>
+                                                </tr>
+                                                <tr height="20">
+                                                    <td width="606"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="middle" width="606"><img src="https://templates.smart.pr/v2/default/lines/images/line-break.jpg" height="10" width="606" /></td>
+                                    </tr>
+                                    {% endif %} 
+                                </table>
+                                <!--SENDER_LOGO_END-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <table width="606" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="1" bgcolor="#FFFFFF"></td>
+                                        <td width="35">&nbsp;</td>
+                                        <td width="534" align="left" valign="top" style="font-family: Georgia, serif; color: #20292E;  font-size:14px; text-align:left;">
+                                            <!-- START: TEKST BLOK -->
+                                            <div style="font-family: Arial, sans-serif; color: #4b4b4b; line-height: 22px; font-size:12px; text-align:left;">
+                                                
+                                                {% if data.news_release.date %}
+                                                <div style="margin-bottom: 12px; margin-top: 12px; font-family: Georgia, serif; color: #4b4b4b;  font-size:12px; text-align:left;">
+                                                    <i class="__DATE_EDITOR__">{{data.news_release.date|formatdate}}</i>
+                                                </div>
+                                                {% endif %}
+
+                                                {% if data.news_release.title %}
+                                                <h1 class="__TITLE_CONTAINER__" style="font-family: Georgia, serif; text-align:left; color: #20292E;  font-size:30px; font-weight: bold; line-height:40px; margin-top:14px; margin-right:0; margin-bottom:12px; margin-left:0;">{{ data.news_release.title }}</h1>
+                                                {% endif %}
+
+                                                {% if data.news_release.subtitle %}
+                                                <h2 class="__SUBTITLE_CONTAINER__" style="font-family: Georgia, serif; text-align: left; color: #20292E;  font-size:20px; font-weight: bold; line-height:30px; margin-top:14px; margin-right:0; margin-bottom:20px; margin-left:0;">{{ data.news_release.subtitle }}</h2>
+                                                {% endif %}
+
+                                                {% autoescape off %}
+                                                {{ data.news_release.body }}
+                                                {% endautoescape %}
+
+                                                <br><br>
+                                            </div>
+                                            {% if data.news_release.attachments  %}
+                                            <div class="__ATTACHMENTS_CONTAINER__" style="border-top: 2px solid #f7f7f7;">
+                                                <div style="height:30px; overflow:hidden">&nbsp;</div>
+                                                {% for element in data.news_release.attachments|sort_by_preview:"150,25" %} 
+                                                {% comment %}element = (attachment, preview, width){% endcomment %}
+                                                {% with element.0 as attachment %}{% with element.1 as preview %}{% with element.2 as width %}                                                                      
+                                                <table border="0" cellpadding="7" cellspacing="0" width="100%" id="bestanden" valign="bottom">
+                                                    <tr>
+                                                        <td width="{{width}}"><a href="{{attachment.file.url}}" style="border: 0;"><img src="{{preview}}" border="0"></a></td>
+                                                        <td style="font-family: Arial, sans-serif; color: #20292E;  line-height:22px; font-size: 12px;"><a href="{{attachment.file.url}}" style="font-family: Arial, sans-serif; color: #20292E;  font-size: 12px;">
+                                                            {% if attachment.file.url|get_type == 'video' %}{{attachment.file.url|get_title}}{% else %}{{attachment.file.url|beautify|nohttp|limit:"40"}}{% endif %}</a>
+                                                            <br>
+                                                            {% if attachment.file.url|get_size_or_provider %}
+                                                            <strong>{{attachment.file.url|get_size_or_provider}}</strong>
+                                                            {% endif %}
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                {% endwith %}{% endwith %}{% endwith %}
+                                                {% endfor %}                                                                                            
+                                            </div>
+                                            {% endif %}
+                                            <div style="height:30px; overflow:hidden">&nbsp;</div>
+                                            <!-- EINDE: TEKST BLOK -->
+                                            <table width="606" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td valign="middle" height="0" width="606"><img src="https://templates.smart.pr/v2/default/lines/images/line-break.jpg" height="10" width="606" /></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width="35">&nbsp;</td>
+                                        <td width="1" bgcolor="#FFFFFF"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="1" bgcolor="#FFFFFF"></td>
+                                        <td width="604" height="0" colspan="3"></td>
+                                        <td width="1" bgcolor="#FFFFFF"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="1" bgcolor="#FFFFFF"></td>
+                                        <td width="604" colspan="3" bgcolor="#FFFFFF" valign="top">
+                                            <!--SENDER_DETAILS_START-->
+                                            <table width="604" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="604" height="20" colspan="4">&nbsp;</td>
+                                                </tr>
+                                                <tr valign="top">
+                                                    <td width="1">&nbsp;</td>
+                                                    <td width="324">
+                                                        <table width="280" border="0" cellspacing="0" cellpadding="0" style="text-shadow: 1px 0 rgba(255, 255, 255, 0.7); font-family: Arial, sans-serif; color: #20292E;  font-size: 12px;">
+                                                            {% if data.news_release.pr_card.name %} 
+                                                            <tr class="__SENDER_NAME_CONTAINER__">
+                                                                <td height="18"><strong>{{ data.news_release.pr_card.name }}</strong></td>
+                                                            </tr>
+                                                            {% endif %} 
+                                                            {% if data.news_release.pr_card.job %}
+                                                            <tr class="__SENDER_JOB_CONTAINER__">
+                                                                <td height="18"><em>{{ data.news_release.pr_card.job }}</em></td>
+                                                            </tr>
+                                                            {% endif %}     
+                                                            {% if data.news_release.pr_card.phones %} 
+                                                            <tr class="__SENDER_PHONES_CONTAINER__">
+                                                                <td height="18">{% for phone in data.news_release.pr_card.phones %}
+                                                                    {{phone}}<br>
+                                                                    {% endfor %}
+                                                                </td>
+                                                            </tr>
+                                                            {% endif %}
+                                                            <tr>
+                                                                <td height="18">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="32">
+                                                                    <table border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            {% if data.news_release.pr_card.twitter_id %} 
+                                                                            <td class="__SENDER_TWITTER_ID_CONTAINER__" width="32" height="32"><a href="http://twitter.com/{{data.news_release.pr_card.twitter_id}}"><img src="https://templates.smart.pr/v2/default/lines/images/twitter.png" alt="Twitter" width="32" height="32" border="0"></a></td>
+                                                                            <td width="5" height="32">&nbsp;</td>
+                                                                            {% endif %}
+                                                                            {% if data.news_release.pr_card.linkedin_company_id %}
+                                                                            <td class="__SENDER_LINKEDIN_COMPANY_ID_CONTAINER__" width="32" height="32"><a href="http://linkedin.com/company/{{data.news_release.pr_card.linkedin_company_id}}"><img src="https://templates.smart.pr/v2/default/lines/images/linkedin.png" alt="LinkedIn" width="32" height="32" border="0"></a></td>
+                                                                            <td width="5" height="32">&nbsp;</td>
+                                                                            {% endif %}
+                                                                            {% if data.news_release.pr_card.linkedin_id %}
+                                                                            <td class="__SENDER_LINKEDIN_ID_CONTAINER__" width="32" height="32"><a href="http://linkedin.com/in/{{data.news_release.pr_card.linkedin_id}}"><img src="https://templates.smart.pr/v2/default/lines/images/linkedin.png" alt="LinkedIn" width="32" height="32" border="0"></a></td>
+                                                                            <td width="5" height="32">&nbsp;</td>
+                                                                            {% endif %}
+                                                                            {% if data.news_release.pr_card.facebook_id %}
+                                                                            <td class="__SENDER_FACEBOOK_ID_CONTAINER__" width="32" height="32"><a href="http://www.facebook.com/{{data.news_release.pr_card.facebook_id}}"><img src="https://templates.smart.pr/v2/default/lines/images/facebook.png" alt="Facebook" width="32" height="32" border="0"></a></td>
+                                                                            <td width="5" height="32">&nbsp;</td>
+                                                                            {% endif %}
+                                                                            {% if data.news_release.pr_card.instagram_id %}
+                                                                            <td class="__SENDER_INSTAGRAM_ID_CONTAINER__" width="32" height="32"><a href="http://www.instagram.com/{{data.news_release.pr_card.instagram_id}}"><img src="https://templates.smart.pr/v2/default/lines/images/instagram.png" alt="Instagram" width="32" height="32" border="0"></a></td>
+                                                                            {% endif %}
+                                                                        </tr>    
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td width="258" colspan="0">
+                                                        <table width="234" border="0" cellspacing="0" cellpadding="0" style="text-shadow: 1px 0 rgba(255, 255, 255, 0.7); font-family: Arial, sans-serif; color: #20292E;  font-size: 12px;">
+                                                            {% if data.news_release.pr_card.company %}
+                                                            <tr class="__SENDER_COMPANY_CONTAINER__">
+                                                                <td height="18" ><strong>{{data.news_release.pr_card.company}}</strong></td>
+                                                            </tr>
+                                                            {% endif %}
+                                                            {% if data.news_release.pr_card.street %} 
+                                                            <tr class="__SENDER_STREET_CONTAINER__">
+                                                                <td height="18">{{data.news_release.pr_card.street}}</td>
+                                                            </tr>
+                                                            {% endif %}   
+                                                            {% if data.news_release.pr_card.zipcode or data.news_release.pr_card.city %}    
+                                                            <tr class="__SENDER_ZIPCODE_CONTAINER__">
+                                                                <td height="18">{{data.news_release.pr_card.zipcode}} {{data.news_release.pr_card.city}}</td>
+                                                            </tr>
+                                                            {% endif %} 
+                                                            {% if data.news_release.pr_card.websites %}
+                                                            <tr class="__SENDER_WEBSITES_CONTAINER__">
+                                                                <td height="18">{% for website in data.news_release.pr_card.websites %}
+                                                                    <a href="{{website}}" style="color:#555354;">{{website|nohttp}}</a><br>
+                                                                    {% endfor %}</a>
+                                                                </td>
+                                                            </tr>
+                                                            {% endif %} 
+                                                        </table>
+                                                    </td>
+                                                    <td width="1">&nbsp;</td>
+                                                </tr>
+                                                {% if data.news_release.pr_card.about %}
+                                                <tr class="__SENDER_ABOUT_CONTAINER__">
+                                                    <td width="1">&nbsp;</td>
+                                                    <td height="auto" colspan="2" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, sans-serif; line-height: 24px; color: #20292E;  font-size: 12px;">
+                                                        <strong style="font-size: 12px; font-family: arial, sans-serif;"><br>Over {{data.news_release.pr_card.company}}</strong><br>{{data.news_release.pr_card.about}}
+                                                        </a>
+                                                    </td>
+                                                    <td width="1">&nbsp;</td>
+                                                </tr>
+                                                {% endif %}
+                                            </table>
+                                            <!--SENDER_DETAILS_END-->
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <!--
+                    <td width="15"></td>
+                    -->
+            </tr>
+        </table>
+        <table width="606" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+            </tr>
+        </table>
+        <table width="534" border="0" align="center" cellspacing="0" cellpadding="3">
+            <tr height="5">
+                <td valign="middle" width="606"><img src="https://templates.smart.pr/v2/default/lines/images/line-break.jpg" height="10" width="606" /></td>
+            </tr>
+            <tr>
+                <td style="color: #BBB; font-size: 10px; font-style: italic; font-family: Arial, sans-serif; color: #20292E;">
+                    <center>Geen berichten meer ontvangen van ons? Klik <a href="[UNSUBSCRIBE]">hier</a></center>
+                </td>
+            </tr>
+        </table>
+        <table width="590" border="0" align="center" cellspacing="0" cellpadding="0">
+            <tr>
+                <td height="15" style="color: #20292E; font-size: 12px; font-style: italic; font-family: Georgia, serif; color: #20292E; "></td>
+            </tr>
+        </table>
+    </body>
+</html>
